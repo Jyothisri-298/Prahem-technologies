@@ -35,6 +35,7 @@ const taskDetails = [
     }
 ];
 
+//Edit description option
 const editDescription = [
     {
         type:'input',

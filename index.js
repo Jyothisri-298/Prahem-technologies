@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
+const config = require('./config');
 
 mongoose.Promise = global.Promise;
 
 //db connection
-const db = mongoose.connect('mongodb://localhost:27017/prahem' , { useNewUrlParser: true ,useUnifiedTopology: true  });
+const { db: { host, port, name } } = config;
+const connectionString = `mongodb://${host}:${port}/${name}`;
+mongoose.connect(connectionString, { useNewUrlParser: true ,useUnifiedTopology: true  });
 
 //import model
 const Task = require('./models/task');
