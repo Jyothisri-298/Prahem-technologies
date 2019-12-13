@@ -1,12 +1,14 @@
 {
-  "name": "tasks",
+  "name": "prahem",
   "version": "1.0.0",
   "description": "Managing tasks",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./commands.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jyothi sri",
   "license": "ISC",
   "dependencies": {
     "commander": "^4.0.1",
